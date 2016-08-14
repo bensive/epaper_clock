@@ -4,18 +4,18 @@
 * DHT22温湿度传感模块
 
 ####硬件连接
-屏幕  | 树莓派
-------------- | -------------
-DIN  | TX(GPIO14)
-DOUT  | RX(GPIO15)
-GND  | GND
-VCC  | 3V
+| 屏幕   | 树莓派        |
+| ---- | ---------- |
+| DIN  | TX(GPIO14) |
+| DOUT | RX(GPIO15) |
+| GND  | GND        |
+| VCC  | 3V         |
 
-DHT22|树莓派
-------------- | -------------
-DOUT  | 1-Wire(BCM4)
-GND  | GND
-VCC  | 3V
+| DHT22 | 树莓派          |
+| ----- | ------------ |
+| DOUT  | 1-Wire(BCM4) |
+| GND   | GND          |
+| VCC   | 3V           |
 DHT22 DOUT引脚也可以接到其他gpio脚上，不过要相应的修改home_air_sensor.py中read_retry第二个参数
 
 ###准备软件环境
@@ -85,3 +85,8 @@ sudo ./home_air_sensor.py
 
 ###成品
 ![the clock](https://raw.github.com/emptyhua/epaper_clock/master/the_clock_0.jpg)
+![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653335-0.jpg)
+内部构造，模块和跳线全部用热熔胶固定
+![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653181-0.jpg)
+![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653495-0.jpg)
+![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653859-0.jpg)
