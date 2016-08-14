@@ -90,3 +90,5 @@ sudo ./home_air_sensor.py
 ![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653181-0.jpg)
 ![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653495-0.jpg)
 ![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653859-0.jpg)
+
+#bensive
