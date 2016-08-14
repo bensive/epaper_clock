@@ -91,4 +91,31 @@ sudo ./home_air_sensor.py
 ![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653495-0.jpg)
 ![the clock](http://shumeipai.nxez.com/wp-content/uploads/2016/05/20160514220653859-0.jpg)
 
-#bensive
+##制作方法
+###所用的硬件
+1、树莓派3
+2、微雪4.3寸串口电子墨水屏
+3、DHT22温湿度传感模块
+
+###硬件连接
+| 屏幕   | 树莓派        |
+| ---- | ---------- |
+| DIN  | TX(GPIO14) |
+| DOUT | RX(GPIO15) |
+| GND  | GND        |
+| VCC  | 3V         |
+
+| DHT22 | 树莓派          |
+| ----- | ------------ |
+| DOUT  | 1-Wire(BCM4) |
+| GND   | GND          |
+| VCC   | V            |
+
+DHT22 DOUT引脚也可以接到其他gpio脚上，不过要相应的修改home_air_sensor.py中read_retry第二个参数
+
+###准备软件环境
+*禽兽，放开那个串口。*
+树莓派的串口默认是用于linux串口终端登录用的，如果要通过串口控制屏幕，就需要把它解放出来～
+
+树莓派3的串口BUG
+在释放串口之前，我们要先解决一下树莓派3的BUG（如果用1,2代请忽略这一步）树莓派3的硬件串口被分配分配给了蓝牙模块，而GPIO14和GPIO15的串口是由内核模拟的，不稳定（可以说基本不能用)，所以首先要把GPIO14和GPIO15改成硬件驱动
